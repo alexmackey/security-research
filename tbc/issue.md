@@ -1,6 +1,6 @@
 # Issue CVE-TBC
 
-Authenticated RCE via malicious zip file upload (ZipSlip)
+Chamilo v1.11.16 - Authenticated RCE via malicious zip file upload (ZipSlip).
 
 # Summary
 
@@ -58,9 +58,9 @@ You will need a user login and to be assigned to at least one course with an ass
 1. On the 3rd and final request (the one that ends `action=finish` e.g. `/chamilo-1.11/main/inc/lib/javascript/bigupload/inc/bigUpload.php?action=finish`) we need to modify it so we can trick Chamilo into extracting the uploaded file even through extract functionality is not available in the UI for the student. To do this do the following:
 * Change the origin parameter in the body to `document` 
 * Add the following parameters: `unzip=1`, `if_exists=overwrite` and `curdirpath = "/"`
-* Your final request body should look something like the following `key=3242343.tmp&name=badzip.zip&type=application/zip&size=182&origin=document&title=test&extension=&_qf__form-work=&contains_file=0&active=1&unzip=1&if_exists=overwrite&curdirpath=/&accepted=1&MAX_FILE_SIZE=2097152&id=1&sec_token=xxxx
-* Send the modified request
-1. The file will get uploaded and then extracted via the path to `/app` and can be accessed at `http://localhost/chamilo-1.11/app/test.php`
+* Your final request body should look something like the following `key=3242343.tmp&name=badzip.zip&type=application/zip&size=182&origin=document&title=test&extension=&_qf__form-work=&contains_file=0&active=1&unzip=1&if_exists=overwrite&curdirpath=/&accepted=1&MAX_FILE_SIZE=2097152&id=1&sec_token=324234`
+13. Send the modified request
+14. The file will get uploaded and then extracted via the path to `/app` and can be accessed at `http://localhost/chamilo-1.11/app/test.php`
 
 ---------------------------------
 Alex Mackey 06/09/2022
