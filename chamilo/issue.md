@@ -1,10 +1,8 @@
-# Issue CVE-TBC
-
-Chamilo LMS Authenticated RCE via malicious zip file upload (ZipSlip)
+# Chamilo LMS Authenticated RCE via malicious zip file upload (ZipSlip)
 
 * Versions: Chamilo v1.11, Chamilo v1.10 and earlier
 * CVE: Awaiting Assignment
-* [Chamilo Issue Description and Resolution](https://support.chamilo.org/projects/chamilo-18/wiki/Security_issues#Issue-94-2022-09-06-High-impact-Moderate-risk-Authenticated-RCE-via-zipslip-attack-in-file-upload)
+* [Chamilo Issue Description and Fix](https://support.chamilo.org/projects/chamilo-18/wiki/Security_issues#Issue-94-2022-09-06-High-impact-Moderate-risk-Authenticated-RCE-via-zipslip-attack-in-file-upload)
 
 # Summary
 
@@ -71,7 +69,7 @@ You will need a user login and to be assigned to at least one course with an ass
 * Add the following parameters: `unzip=1`, `if_exists=overwrite` and `curdirpath = "/"`
 * Your final request body should look something like the following `key=3242343.tmp&name=badzip.zip&type=application/zip&size=182&origin=document&title=test&extension=&_qf__form-work=&contains_file=0&active=1&unzip=1&if_exists=overwrite&curdirpath=/&accepted=1&MAX_FILE_SIZE=2097152&id=1&sec_token=324234`
 13. Send the modified request
-14. The file will get uploaded and then extracted via the path to `/app` and can be accessed at `http://localhost/chamilo-1.11/app/info.php`
+14. The file will get uploaded and then extracted via the path to `/app` and can be accessed at `/chamilo-1.11/app/info.php`
 
 ---------------------------------
 Alex Mackey 6th Sep 2022
