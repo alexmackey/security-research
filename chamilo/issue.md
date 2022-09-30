@@ -1,6 +1,8 @@
-# Issue CVE-TBC
+# Issue CVE-2022-40407
 
 Chamilo v1.11.16 - Authenticated RCE via malicious zip file upload (ZipSlip).
+
+[https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40407)
 
 # Summary
 
