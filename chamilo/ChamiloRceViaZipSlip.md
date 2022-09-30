@@ -1,14 +1,9 @@
-<<<<<<<< HEAD:chamilo/issue.md
 # Issue CVE-2022-40407
-========
+
 # Chamilo LMS Authenticated RCE via malicious zip file upload (ZipSlip)
->>>>>>>> 28b0b07bae02ffe9b85a232d65a2b474821caa4d:chamilo/ChamiloRceViaZipSlip.md
-
 * Versions: Chamilo v1.11, Chamilo v1.10 and earlier
-* CVE: Awaiting Assignment
+* CVE: [CVE-2022-40407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40407)
 * [Chamilo Issue Description and Fix](https://support.chamilo.org/projects/chamilo-18/wiki/Security_issues#Issue-94-2022-09-06-High-impact-Moderate-risk-Authenticated-RCE-via-zipslip-attack-in-file-upload)
-
-[https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40407](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40407)
 
 # Summary
 
